@@ -34,10 +34,12 @@ A sophisticated dotfiles configuration that creates seamless color scheme synchr
 ## Installation
 
 ### Prerequisites
-- Windows 10/11 with WSL2
-- PowerShell 7+ (recommended)
-- Windows Terminal
-- Python and pip (for Pywal)
+- Windows 10/11 with WSL2 enabled
+- PowerShell 7+ (covers installation in video)
+- Windows Terminal (for best visual experience)
+- **Nerd Font** (required for icons - covered in setup video)
+- Python and pip (for Pywal installation)
+- Optional: **Wallpaper Engine** (for live wallpaper color extraction)
 
 ### Setup Steps
 
@@ -46,19 +48,22 @@ A sophisticated dotfiles configuration that creates seamless color scheme synchr
    pip install pywal
    ```
 
-2. **Install PowerShell Modules**
+2. **Install Required PowerShell Modules**
    ```powershell
-   Install-Module -Name Terminal-Icons
-   Install-Module -Name PSReadLine
+   # Terminal Icons for file type icons
+   Install-Module -Name Terminal-Icons -Force
+
+   # PSReadLine for enhanced autocompletion (covered in Part 2)
+   Install-Module -Name PSReadLine -Force
    ```
 
-3. **Install Starship**
+3. **Install Starship Prompt**
    ```bash
-   # WSL
+   # In WSL (Ubuntu/Debian)
    curl -sS https://starship.rs/install.sh | sh
    ```
    ```powershell
-   # PowerShell
+   # In PowerShell (Windows)
    winget install --id Starship.Starship
    ```
 
@@ -96,11 +101,18 @@ Wallpaper-Starship
 Screenshot-Starship
 ```
 
-### Core Functions
+### Core Functions (from winwal.psm1 module)
 
-- `pywal_to_starship`: Updates colors from current wallpaper
-- `update_pywal_to_starship`: Updates theme with new wallpaper
-- `screenshot_to_pywal_to_starship`: Captures screenshot and generates theme
+- `pywal_to_starship`: Updates Starship colors from current Pywal theme
+- `update_pywal_to_starship`: Generates new Pywal theme from wallpaper and syncs
+- `screenshot_to_pywal_to_starship`: Takes desktop screenshot, generates theme, and applies colors
+
+### PSReadLine Autocompletion
+The setup includes enhanced PowerShell autocompletion with PSReadLine:
+- History-based suggestions
+- Predictive text
+- Enhanced tab completion
+- Configured in the PowerShell profile
 
 ### Manual Sync
 
@@ -171,8 +183,11 @@ These colors are automatically applied to:
 
 ## Videos
 
-- [Setup and Configuration - Part 1](https://youtu.be/bsZcSO0RGVQ)
-- [Advanced Usage and Customization - Part 2](https://youtu.be/Yw0kYV3bD4c)
+### [Part 1: Complete Setup Guide](https://youtu.be/bsZcSO0RGVQ)
+Comprehensive tutorial for setting up PowerShell and WSL (bash) environment in Windows 11 with Pywal integration for dynamic color theming from desktop backgrounds and live wallpapers (Wallpaper Engine support).
+
+### [Part 2: Advanced Features](https://youtu.be/Yw0kYV3bD4c)
+Advanced configuration including screenshot-based theming, winwal.psm1 module enhancements, and PSReadLine autocompletion setup.
 
 ## License
 
