@@ -1,6 +1,9 @@
-# WSL Dotfiles - Unified Color Scheme System
+# WSL dotfiles
 
-A sophisticated dotfiles configuration that creates seamless color scheme synchronization between WSL (Windows Subsystem for Linux) and Windows Terminal environments using Pywal.
+The shell of /SHELL/INIT and /SHELL/SYNC: PowerShell 7 and WSL side by side on Windows 11, the Starship prompt in both, Pywal (through winwal) taking the palette from the wallpaper or a screenshot and keeping the two terminals on the same colours.
+
+The videos: [/SHELL/INIT — A terminal from scratch on Windows 11 and WSL](https://youtu.be/bsZcSO0RGVQ) and [/SHELL/SYNC — The same terminal in WSL and bash, with PSReadLine](https://youtu.be/Yw0kYV3bD4c)
+Everything I make, by path: [walior.it](https://walior.it/)
 
 ## Features
 
@@ -183,10 +186,10 @@ These colors are automatically applied to:
 
 ## Videos
 
-### [Part 1: Complete Setup Guide](https://youtu.be/bsZcSO0RGVQ)
+### [/SHELL/INIT — A terminal from scratch on Windows 11 and WSL](https://youtu.be/bsZcSO0RGVQ)
 Comprehensive tutorial for setting up PowerShell and WSL (bash) environment in Windows 11 with Pywal integration for dynamic color theming from desktop backgrounds and live wallpapers (Wallpaper Engine support).
 
-### [Part 2: Advanced Features](https://youtu.be/Yw0kYV3bD4c)
+### [/SHELL/SYNC — The same terminal in WSL and bash, with PSReadLine](https://youtu.be/Yw0kYV3bD4c)
 Advanced configuration including screenshot-based theming, winwal.psm1 module enhancements, and PSReadLine autocompletion setup.
 
 ## License
